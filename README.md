@@ -13,6 +13,14 @@ _This library was conceived as Zig learning project and it was not used by me in
   - **Currently only single byte characters.**
 - Parser does not allocate – caller provides a buffer that parser operates in. **Buffer must be longer than a longest field in input.**
 
+## Installing
+
+In your zig project folder (where build.zig is located), run:
+
+```
+zig fetch --save "git+https://github.com/pollend/zig-csv.git"
+```
+
 ## Example
 
 Following code reads CSV tokens from a file while very naively printing them as table to standard output.
