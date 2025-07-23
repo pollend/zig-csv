@@ -156,7 +156,7 @@ fn CsvReader(comptime Reader: type) type {
         }
 
         // Ensures that there are some data in the buffer. Returns false if no data are available
-        pub inline fn ensureData(self: *Self) !bool {
+        pub fn ensureData(self: *Self) !bool {
             if (!self.empty()) {
                 return true;
             }
