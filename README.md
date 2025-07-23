@@ -21,6 +21,13 @@ In your zig project folder (where build.zig is located), run:
 zig fetch --save "git+https://github.com/pollend/zig-csv.git"
 ```
 
+Now in your `build.zig` you can access the module like this:
+
+```
+const zig_csv = b.dependency("zig_csv", .{});
+exe_mod.addImport("csv", zig_csv.module("csv"));
+```
+
 ## Example
 
 Following code reads CSV tokens from a file while very naively printing them as table to standard output.
